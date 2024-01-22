@@ -14,11 +14,12 @@ using namespace std;
 //created a structure for the library using a class 
 class Library611 
 {
-	int bookid;
+	int bookid; 
+	int pages;
 	char bookname[20];
 	char bookauthor[20];
     char genre[20];
-    int pages;
+   
     int dueDay[3]; 
 }
 
@@ -84,7 +85,7 @@ int main(int argc, char** argv) {
 		    getchar();getchar();
 		    }
 
-         /* The option to add a new staff member login*/		    
+         //The display options to add a new staff member login		    
 		    }
 		    else if (outerChoice ==2) {
 		    	char newstaffUser [15];
@@ -112,7 +113,7 @@ int main(int argc, char** argv) {
 				 cin>>innerChoice;
 
 					 switch (innerChoice) {
-					 case 1: borrowBook(); break;
+					 case 1: addBook(); break;
 					 case 2: returnBook(); break;
 					 case 3: listOfAllBooks (); break;
 					 case 9: break;
@@ -224,29 +225,3 @@ int main(int argc, char** argv) {
 
 			/*------------------ End of Library611.cpp -------------*/
 
-			/* ---------------- main.h ----------------- */
-#define ADMINUSER "admin"
-#define ADMINPASSWORD "admin123"
-
-#define USER "user"
-#define USERPASSWORD "user123"
-
-#define FINE  
-
-int addBook();
-
-int deleteBook();
-
-int updateBook();
-
-int listOfAllBooks();
-
-int borrowBook();
-
-int returnBook();
-
-int adminLogin();
-
-int userLogin();
-
-/* - -------------------- end of main.h -----------------*/
